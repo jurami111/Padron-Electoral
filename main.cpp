@@ -7,9 +7,10 @@
 using namespace std;
 using namespace chrono;
 
-// ============================================================================
+
 // ESTRUCTURA PRINCIPAL DE DATOS (PERSONA)
-// ============================================================================
+//Esta es una es la estructura más importante, representa el registr/datos de cada persona 
+
 struct Persona
 {
     long long cedula;
@@ -20,9 +21,9 @@ struct Persona
     char apellido2[40];
 };
 
-// ============================================================================
+
 // ESTRUCTURAS DE TIEMPOS Y REPORTE GENERAL
-// ============================================================================
+//Sirve para almacenar los tiempos de ejecución de las operaciones realizadas sobre una estructura de datos 
 struct TiempoOperacion
 {
     double carga = 0;
@@ -30,7 +31,7 @@ struct TiempoOperacion
     double busqueda = 0;
     double destruccion = 0;
 };
-
+//Guarda o agrupa los tiempos medidos de las diferentes estructuras de datos 
 struct ReporteGeneral
 {
     TiempoOperacion lista;
@@ -39,10 +40,9 @@ struct ReporteGeneral
     TiempoOperacion btree;
 };
 
-// ============================================================================
-// FUNCION AUXILIAR DE LIMPIEZA DE ESPACIOS EN BLANCO (TRIM)
-// ============================================================================
-void LimpiarEspacios(char* str)
+
+
+void LimpiarEspacios(char* str) // Limpia espacios en blanco 
 {
     int i = (int)strlen(str) - 1;
     while (i >= 0 && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\r'))
